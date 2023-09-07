@@ -11,21 +11,6 @@
     justify-content: space-between;
     gap: 12rem;
 
-    // .history-col-1 {
-    //   display: flex;
-    //   gap: 1.5rem;
-
-    //   .history-img-1 {
-    //     height: clamp(40rem, 26vw, 50rem);
-    //     width: clamp(22rem, 17vw, 31rem);
-    //   }
-    //   .history-img-2 {
-    //     height: clamp(22rem, 16vw, 28rem);
-    //     width: clamp(25rem, 20vw, 36rem);
-    //     object-fit: cover;
-    //   }
-    // }
-
     .history-col-1 {
       display: grid;
       grid-template-columns: 1fr 0.7fr;
@@ -60,17 +45,10 @@
     .history-col-2 {
       margin: auto 0;
       h3 {
-        line-height: 1.1;
-        display: flex;
-        gap: 2rem;
-        font-size: clamp(2.4rem, 10vw, 3.2rem);
+        @include h3bar;
       }
       span {
-        display: block;
-        width: 5rem;
-        height: 0.2rem;
-        background-color: $primary;
-        margin: auto 0;
+        @include bar;
       }
       p {
         font-size: clamp(1.4rem, 10vw, 1.6rem);

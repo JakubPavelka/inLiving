@@ -9,3 +9,18 @@
   object-fit: cover;
   transition: transform 0.3s linear;
 }
+
+@mixin bar {
+  display: block;
+  width: 5rem;
+  height: 0.2rem;
+  background-color: $primary;
+  margin: auto 0;
+}
+
+@mixin h3bar {
+  line-height: 1.1;
+  display: flex;
+  gap: 2rem;
+  font-size: clamp(2.4rem, 10vw, 3.2rem);
+}
