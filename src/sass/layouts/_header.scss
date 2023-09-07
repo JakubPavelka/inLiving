@@ -1,0 +1,312 @@
+// **********************
+// **** NAVBAR START ****
+// **********************
+header {
+  background-image: url("/src/img/marble.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-height: 100%;
+  width: 100%;
+}
+
+.nav-col-1 {
+  padding-left: 1rem;
+
+  .logo {
+    font-size: $base-font-size * 2;
+    line-height: 1;
+
+    &:hover {
+      color: $primary;
+      transition: 0.3s;
+    }
+  }
+}
+
+.nav-col-2 {
+  .nav-items {
+    .nav-links {
+      .nav-link {
+        &:first-child {
+          color: $primary;
+        }
+        a {
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background-color: $primary;
+            bottom: -5px;
+            left: 0;
+            transition: 0.2s;
+          }
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav-col-3 {
+  padding-right: 1rem;
+
+  .display-n {
+    padding-right: 0;
+  }
+  .nav-icons {
+    .nav-icon {
+      height: 1.8rem;
+      display: flex;
+    }
+
+    a {
+      &:hover {
+        color: $primary;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+.nav-col-4 {
+  position: relative;
+  .nav-tel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1rem;
+
+    .tel {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 3px;
+        background-color: $primary;
+        bottom: -5px;
+        left: 0;
+        transition: 0.2s;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// **********************
+// ***** NAVBAR END *****
+// **********************
+
+// **********************
+// * UNDERNAVBAR START **
+// **********************
+
+.undernav-flex {
+  display: flex;
+  justify-content: space-between;
+  .undernav-col-1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    span {
+      color: $primary;
+    }
+
+    h2 {
+      margin-top: 6rem;
+      margin-bottom: 2.2rem;
+      font-size: clamp(36px, 7.5vw, 90px);
+      max-width: 65rem;
+      line-height: 1;
+    }
+
+    .undernav-p1 {
+      max-width: 65rem;
+      font-size: clamp(1.2rem, 1vw, 1.6rem);
+      line-height: 1.5;
+      margin-bottom: 2.5rem;
+      margin-right: 0.5rem;
+    }
+
+    .btn {
+      border-radius: 3px;
+      text-align: center;
+      color: #fff;
+      margin-bottom: 3rem;
+      font-size: clamp(1.2rem, 1vw, 1.6rem);
+      transition: all 0.3s;
+      &:hover {
+        background-color: $prDark;
+      }
+    }
+
+    .bottom-col-flex {
+      display: flex;
+      gap: 3rem;
+    }
+
+    .durability {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 5rem;
+      .durability-icon {
+        @include undernavIcons;
+      }
+
+      .durability-text {
+        h3 {
+          font-size: clamp(0.9rem, 1vw, 1.6rem);
+        }
+
+        p {
+          font-size: clamp(0.9rem, 1vw, 1.6rem);
+        }
+      }
+    }
+
+    .modern-int {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 5rem;
+      .modern-icon {
+        @include undernavIcons;
+      }
+
+      .modern-text {
+        h3 {
+          font-size: clamp(0.9rem, 1vw, 1.6rem);
+        }
+
+        p {
+          font-size: clamp(0.9rem, 1vw, 1.6rem);
+        }
+      }
+    }
+  }
+
+  .undernav-col-2 {
+    position: relative;
+    padding-bottom: 5rem;
+
+    img {
+      width: 100%;
+      max-height: 80%;
+      margin-top: 6rem;
+      z-index: 100;
+      position: relative;
+      border-left: 1rem solid $primary;
+    }
+  }
+}
+
+// **********************
+// ** UNDERNAVBAR END ***
+// **********************
+
+// **********************
+// * MEDIAQUERIES START *
+// **********************
+
+// ******* NAVBAR *******
+
+@include xl {
+  .nav-col-1 {
+    .logo {
+      font-size: $base-font-size * 1.6;
+    }
+  }
+  .nav-col-2 {
+    .nav-link {
+      padding: 0 1rem;
+    }
+  }
+
+  .nav-col-3 {
+    a {
+      padding: 0 1rem;
+    }
+  }
+}
+
+@include lg {
+  .nav-col-2 {
+    display: none;
+  }
+
+  .nav-col-3 {
+    a {
+      &:last-child {
+        display: flex;
+        padding-right: 0rem;
+      }
+    }
+  }
+
+  .nav-col-4 {
+    display: none;
+  }
+}
+
+@include sm {
+  .nav-col-1 {
+    padding-left: 0;
+  }
+
+  .nav-col-3 {
+    padding-right: 0;
+    a {
+      padding: 0 0.25rem;
+    }
+    .nav-icons {
+      .nav-icon {
+        height: 1.6rem;
+      }
+    }
+  }
+
+  .undernav-flex {
+    .undernav-col-1 {
+      padding: 0;
+      .bottom-col-flex {
+        gap: 1rem;
+      }
+    }
+  }
+}
+
+// *****NAVBAR END ******
+// *** UNDERNAV START ***
+
+@media (max-width: 960px) {
+  .undernav-flex {
+    display: block;
+  }
+  .undernav-col-1 {
+    h2 {
+      width: 100%;
+    }
+  }
+
+  .undernav-col-2 {
+    img {
+      display: none;
+    }
+  }
+}
+
+// *** UNDERNAV END *****
+
+// **********************
+// ** MEDIAQUERIES END **
+// **********************

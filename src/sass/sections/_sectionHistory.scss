@@ -1,0 +1,140 @@
+// **********************
+// **** HISTORY START ***
+// **********************
+
+.history {
+  padding-top: 10rem;
+  padding-bottom: 15rem;
+
+  .history-flex-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 12rem;
+
+    // .history-col-1 {
+    //   display: flex;
+    //   gap: 1.5rem;
+
+    //   .history-img-1 {
+    //     height: clamp(40rem, 26vw, 50rem);
+    //     width: clamp(22rem, 17vw, 31rem);
+    //   }
+    //   .history-img-2 {
+    //     height: clamp(22rem, 16vw, 28rem);
+    //     width: clamp(25rem, 20vw, 36rem);
+    //     object-fit: cover;
+    //   }
+    // }
+
+    .history-col-1 {
+      display: grid;
+      grid-template-columns: 1fr 0.7fr;
+      grid-template-rows: 0.3fr 0.3fr;
+      gap: 1.2rem;
+      align-content: center;
+
+      .history-img-1 {
+        @include imgOc;
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+
+        &:hover {
+          transform: scale(102%);
+        }
+      }
+      .history-img-2 {
+        @include imgOc;
+
+        &:hover {
+          transform: scale(102%);
+        }
+      }
+      .history-img-3 {
+        @include imgOc;
+
+        &:hover {
+          transform: scale(102%);
+        }
+      }
+    }
+    .history-col-2 {
+      margin: auto 0;
+      h3 {
+        line-height: 1.1;
+        display: flex;
+        gap: 2rem;
+        font-size: clamp(2.4rem, 10vw, 3.2rem);
+      }
+      span {
+        display: block;
+        width: 5rem;
+        height: 0.2rem;
+        background-color: $primary;
+        margin: auto 0;
+      }
+      p {
+        font-size: clamp(1.4rem, 10vw, 1.6rem);
+        line-height: 1.8;
+        padding: 3rem 0 5rem;
+      }
+      a {
+        font-size: clamp(1.4rem, 10vw, 1.6rem);
+        color: $primary;
+        position: relative;
+        font-weight: 600;
+        transition: all 0.3s;
+
+        &:hover {
+          color: $prDark;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 0.1rem;
+          background-color: $primary;
+          bottom: -0.2rem;
+          left: 0;
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+}
+
+// **********************
+// **** HISTORY END *****
+// **********************
+
+// **********************
+// * MEDIAQUERIES START *
+// **********************
+
+@include lg {
+  .history {
+    .history-flex-wrap {
+      flex-direction: column-reverse;
+      gap: 6rem;
+      .history-col-1 {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        gap: 0.8rem;
+
+        .history-img-1 {
+          grid-row: 1 / 2;
+        }
+      }
+      .history-col-2 {
+        p {
+          padding: 2rem 0 3rem;
+        }
+      }
+    }
+  }
+}
+
+// **********************
+// ** MEDIAQUERIES END **
+// **********************
