@@ -22,14 +22,14 @@
   line-height: 1.1;
   display: flex;
   gap: 2rem;
-  font-size: clamp(2.4rem, 8vw, 3.2rem);
+  font-size: clamp(2.2rem, 6vw, 3.2rem);
 }
 
 @mixin itemRow {
 }
 
 @mixin readMore {
-  font-size: clamp(1.4rem, 10vw, 1.6rem);
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
   color: $primary;
   position: relative;
   font-weight: 600;
@@ -59,9 +59,41 @@
   transition: all 0.3s;
   max-width: 30rem;
   margin: 0 auto 0.5rem auto;
-
+  color: $prDark;
   &:hover {
-    color: $primary;
     transform: scale(1.2);
   }
+}
+
+@mixin arrow {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin arrowRight {
+  height: 7vw;
+  width: 7vw;
+  display: flex;
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  background-color: #5555556b;
+  color: #fff;
+  cursor: pointer;
+}
+
+@mixin arrowLeft {
+  height: 7vw;
+  width: 7vw;
+  display: flex;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  background-color: #5555556b;
+  color: #fff;
+  cursor: pointer;
 }

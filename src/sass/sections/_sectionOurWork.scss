@@ -3,7 +3,7 @@
 // **********************
 
 .our-work {
-  padding-bottom: 15rem;
+  padding-bottom: 7.5rem;
   .our-work-flex-wrap {
     display: flex;
     justify-content: space-between;
@@ -117,7 +117,7 @@
 
 @media (max-width: 600px) {
   .our-work {
-    padding-bottom: 7.5rem;
+    padding-bottom: 2.5rem;
     .our-work-flex-wrap {
       a {
         display: none;
@@ -181,29 +181,6 @@
     }
   }
 }
-
-// @media (max-width: 375px) {
-//   .our-work {
-//     .our-work-row-1 {
-//       .our-work-row-1-wrapper {
-//         p {
-//           text-align: center;
-//         }
-//       }
-//     }
-
-//     .our-work-row-2 {
-//       .our-work-row-1-wrapper {
-//         .p-wrapper {
-//           p {
-//             text-align: center;
-//             width: 100%;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
 
 // **********************
 // ** MEDIAQUERIES END **

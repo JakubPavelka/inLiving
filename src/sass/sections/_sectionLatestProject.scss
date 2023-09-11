@@ -1,0 +1,131 @@
+// **********************
+//  LATEST PROJECT START
+// **********************
+
+.latest-project {
+  background-image: url("/src/img/marble.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-height: 100%;
+  width: 100%;
+  padding: 7.5rem 0;
+  .latest-project-flex-wrap {
+    display: flex;
+    justify-content: space-between;
+
+    .latest-project-col-1 {
+      max-width: 55rem;
+      h3 {
+        @include h3bar;
+        padding-top: 3rem;
+        margin-bottom: 4.5rem;
+      }
+
+      span {
+        @include bar;
+      }
+
+      p {
+        font-size: clamp(1.2rem, 4vw, 1.6rem);
+        margin-bottom: 8.2rem;
+        line-height: 1.8;
+      }
+
+      .latest-project-col-1-bottom-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        a {
+          @include readMore;
+        }
+
+        .arrows {
+          display: flex;
+          gap: 0.1rem;
+
+          .arrow-left {
+            @include arrow;
+            background-color: #e0dede;
+          }
+
+          .arrow-right {
+            @include arrow;
+            background-color: $primary;
+            color: #fff;
+            margin-right: 2rem;
+          }
+        }
+      }
+    }
+
+    .latest-project-col-2 {
+      margin: 0 auto;
+      img {
+        object-fit: cover;
+        max-width: 30rem;
+        max-height: 40rem;
+      }
+      .arrow-left {
+        @include arrow;
+        display: none;
+      }
+      .arrow-right {
+        @include arrow;
+        display: none;
+      }
+    }
+  }
+}
+
+// **********************
+// * LATEST PROJECT END *
+// **********************
+
+// **********************
+// * MEDIAQUERIES START *
+// **********************
+
+@include lg {
+  .latest-project {
+    padding: 5rem 0;
+    .latest-project-flex-wrap {
+      flex-direction: column;
+      gap: 3.5rem;
+      .latest-project-col-1 {
+        p {
+          margin-bottom: 3.5rem;
+        }
+
+        h3 {
+          padding-top: 0;
+          margin-bottom: 3rem;
+        }
+        .latest-project-col-1-bottom-flex {
+          .arrows {
+            display: none;
+          }
+        }
+      }
+
+      .latest-project-col-2 {
+        position: relative;
+        img {
+          width: 40vw;
+        }
+
+        .arrow-left {
+          @include arrowLeft;
+        }
+
+        .arrow-right {
+          @include arrowRight;
+        }
+      }
+    }
+  }
+}
+
+// **********************
+// ** MEDIAQUERIES END **
+// **********************
