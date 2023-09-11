@@ -6,7 +6,7 @@
   margin-bottom: 15rem;
   h3 {
     @include h3bar;
-    margin-bottom: 6rem;
+    margin-bottom: 5rem;
   }
   span {
     @include bar;
@@ -20,14 +20,14 @@
     .team-col-1 {
       padding: 8rem 4rem;
       h4 {
-        font-size: clamp(15rem, 20vw, 20rem);
+        font-size: clamp(10rem, 20vw, 20rem);
         line-height: 1;
         color: #fff;
         -webkit-text-stroke: 2px white;
         -webkit-text-fill-color: transparent;
       }
       p {
-        font-size: clamp(2.4rem, 7vw, 3.2rem);
+        font-size: clamp(2rem, 5vw, 3.2rem);
         font-weight: 600;
         color: #fff;
       }
@@ -70,6 +70,7 @@
 
 @include lg {
   .team {
+    margin-bottom: 5rem;
     .container {
       padding: 0;
       h3 {
@@ -81,15 +82,37 @@
       flex-direction: column;
       .team-col-1 {
         margin: auto 0;
-        padding-top: 1rem;
-        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
+        .team-col-text-wrapper {
+          display: flex;
+          gap: 2rem;
+
+          .team-col-p-wrapper {
+            display: flex;
+
+            justify-content: center;
+            flex-direction: column;
+          }
+        }
       }
 
       .team-col-2 {
+        grid-template-columns: repeat(6, 1fr);
         width: 100%;
         img {
           width: 100%;
           object-position: 50% 15%;
+        }
+      }
+    }
+  }
+}
+@include md {
+  .team {
+    .team-flex-wrap {
+      .team-col-1 {
+        .team-col-text-wrapper {
+          padding-bottom: 1rem;
         }
       }
     }

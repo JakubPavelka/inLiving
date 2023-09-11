@@ -22,5 +22,46 @@
   line-height: 1.1;
   display: flex;
   gap: 2rem;
-  font-size: clamp(2.4rem, 10vw, 3.2rem);
+  font-size: clamp(2.4rem, 8vw, 3.2rem);
+}
+
+@mixin itemRow {
+}
+
+@mixin readMore {
+  font-size: clamp(1.4rem, 10vw, 1.6rem);
+  color: $primary;
+  position: relative;
+  font-weight: 600;
+  transition: all 0.3s;
+
+  &:hover {
+    color: $prDark;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.1rem;
+    background-color: $primary;
+    bottom: -0.2rem;
+    left: 0;
+    transition: 0.2s;
+  }
+}
+
+.hidden {
+  display: none;
+  font-size: $font-size-lg;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 0.3s;
+  max-width: 30rem;
+  margin: 0 auto 0.5rem auto;
+
+  &:hover {
+    color: $primary;
+    transform: scale(1.2);
+  }
 }

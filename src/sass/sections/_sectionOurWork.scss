@@ -1,0 +1,210 @@
+// **********************
+// *** OUR WORK START ***
+// **********************
+
+.our-work {
+  padding-bottom: 15rem;
+  .our-work-flex-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+      @include h3bar;
+      max-width: 46rem;
+    }
+    span {
+      @include bar;
+      width: 8rem;
+    }
+    a {
+      @include readMore;
+    }
+  }
+
+  .our-work-row-1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 4rem 4rem 10rem 4rem;
+
+    gap: 1rem;
+
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 0.1rem;
+      background-color: $primary;
+      bottom: -5.2rem;
+      left: 0;
+    }
+
+    h4 {
+      font-size: $base-font-size;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: $font-size-sm;
+      max-width: 34rem;
+    }
+
+    .p-wrapper {
+      p {
+        &:last-child {
+          font-size: 2rem;
+          color: $primary;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .our-work-row-2 {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 9.5rem;
+    gap: 2rem;
+
+    h4 {
+      font-size: $base-font-size;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: $font-size-sm;
+      max-width: 34rem;
+    }
+
+    .p-wrapper {
+      p {
+        &:last-child {
+          font-size: 2rem;
+          color: $primary;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+// **********************
+// **** OUR WORK END ****
+// **********************
+
+// **********************
+// * MEDIAQUERIES START *
+// **********************
+
+@include lg {
+  .our-work {
+    .our-work-flex-wrap {
+      display: block;
+      text-align: center;
+
+      h3 {
+        margin-bottom: 4rem;
+        text-align: start;
+      }
+
+      a {
+        display: inline;
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .our-work {
+    padding-bottom: 7.5rem;
+    .our-work-flex-wrap {
+      a {
+        display: none;
+      }
+    }
+    .our-work-row-1 {
+      display: block;
+      margin: 0 auto;
+      &::after {
+        display: none;
+      }
+      .our-work-row-1-wrapper {
+        h4 {
+          display: none;
+        }
+
+        .hidden {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 0.5rem;
+
+          &:first-child {
+            padding-top: 1rem;
+          }
+        }
+        .p-wrapper {
+          display: none;
+          p {
+            display: none;
+            &:last-child {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    .our-work-row-2 {
+      display: block;
+      .our-work-row-2-wrapper {
+        h4 {
+          display: none;
+        }
+
+        .hidden {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 0.5rem;
+        }
+      }
+      .p-wrapper {
+        display: none;
+        p {
+          display: none;
+
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// @media (max-width: 375px) {
+//   .our-work {
+//     .our-work-row-1 {
+//       .our-work-row-1-wrapper {
+//         p {
+//           text-align: center;
+//         }
+//       }
+//     }
+
+//     .our-work-row-2 {
+//       .our-work-row-1-wrapper {
+//         .p-wrapper {
+//           p {
+//             text-align: center;
+//             width: 100%;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// **********************
+// ** MEDIAQUERIES END **
+// **********************
