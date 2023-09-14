@@ -1,0 +1,67 @@
+// **********************
+// *****BLOG START ******
+// **********************
+
+.blog {
+  margin-bottom: 7.5rem;
+  padding-top: 7.5rem;
+  h3 {
+    @include h3bar;
+    margin-bottom: 7.5rem;
+  }
+  span {
+    @include bar;
+  }
+  .blog-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 3rem;
+    .blog-col {
+      max-width: 43.3rem;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 15px 0px;
+      .blog-col-img {
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .blog-col-text {
+        padding: 3rem;
+        h4 {
+          font-size: clamp(1.4rem, 5vw, 2rem);
+          margin-bottom: 1rem;
+        }
+
+        p {
+          font-size: clamp(1.2rem, 4vw, 1.6rem);
+          margin-bottom: 2rem;
+        }
+        a {
+          @include readMore;
+        }
+      }
+    }
+  }
+}
+
+// **********************
+// ***** BLOG END *******
+// **********************
+
+// **********************
+// * MEDIAQUERIES START *
+// **********************
+@include lg {
+  .blog {
+    margin-bottom: 5rem;
+
+    h3 {
+      margin-bottom: 4rem;
+    }
+  }
+}
+// **********************
+// ** MEDIAQUERIES END **
+// **********************

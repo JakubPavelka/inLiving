@@ -1,0 +1,94 @@
+// **********************
+// **** FOOTER START ****
+// **********************
+
+footer {
+  background-color: $primary;
+  padding-top: 7.5rem;
+  position: relative;
+  padding-bottom: 2.5rem;
+
+  .footer-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10%;
+    margin-bottom: 6rem;
+
+    .footer-col {
+      color: #fff;
+
+      h5 {
+        font-size: clamp(1.4rem, 5vw, 2rem);
+        margin-bottom: 2rem;
+      }
+      p {
+        font-size: clamp(1.2rem, 5vw, 1.6rem);
+        margin-bottom: 1rem;
+        transition: all 0.3s;
+
+        &:hover {
+          color: #e4e4e4;
+        }
+      }
+
+      i {
+        font-size: clamp(1.2rem, 5vw, 1.6rem);
+        margin-right: 1rem;
+        transition: all 0.3s;
+
+        &:hover {
+          color: #e4e4e4;
+        }
+      }
+    }
+  }
+  i {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+    color: #fff;
+    font-weight: lighter;
+  }
+}
+
+// **********************
+// ***** FOOTER END *****
+// **********************
+
+// **********************
+// * MEDIAQUERIES START *
+// **********************
+@include lg {
+  footer {
+    padding-top: 5rem;
+    .footer-row {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 4rem;
+      .footer-col {
+        .logo {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@include md {
+  footer {
+    .footer-row {
+      grid-template-columns: 1fr;
+
+      .footer-col {
+        margin-bottom: 1rem;
+        h5 {
+          margin-bottom: 1rem;
+        }
+
+        p {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}
+// **********************
+// ** MEDIAQUERIES END **
+// **********************

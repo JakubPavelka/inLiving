@@ -3,6 +3,7 @@
 // **********************
 
 .our-work {
+  padding-top: 7.5rem;
   padding-bottom: 7.5rem;
   .our-work-flex-wrap {
     display: flex;
@@ -97,6 +98,7 @@
 
 @include lg {
   .our-work {
+    padding-top: 2.5rem;
     .our-work-flex-wrap {
       display: block;
       text-align: center;

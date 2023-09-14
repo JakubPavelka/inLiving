@@ -3,7 +3,8 @@
 // **********************
 
 .team {
-  margin-bottom: 15rem;
+  padding-top: 7.5rem;
+  margin-bottom: 7.5rem;
   h3 {
     @include h3bar;
     margin-bottom: 5rem;
@@ -70,6 +71,7 @@
 
 @include lg {
   .team {
+    padding-top: 5rem;
     margin-bottom: 5rem;
     .container {
       padding: 0;

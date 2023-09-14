@@ -4,7 +4,7 @@
 
 .history {
   padding-top: 10rem;
-  padding-bottom: 15rem;
+  padding-bottom: 7.5rem;
 
   .history-flex-wrap {
     display: flex;
@@ -72,7 +72,7 @@
 
 @include lg {
   .history {
-    padding: 2.5rem 0 5rem;
+    padding: 5rem 0;
     .history-flex-wrap {
       flex-direction: column-reverse;
       gap: 6rem;
